@@ -5,6 +5,7 @@ buildscript {
         springVersion = '3.3.5'
         springDependencyManagementVersion = '1.1.6'
         openApiVersion = '1.8.0'
+        springCloudStramVersion = '4.1.3'
     }
 }
 
@@ -32,9 +33,8 @@ dependencies {
             // swagger
             "org.springdoc:springdoc-openapi-ui:${openApiVersion}",
             // pulsar
-            'org.springframework.cloud:spring-cloud-stream',
-            'org.springframework.cloud:spring-cloud-stream-binder-pulsar',
-            'org.apache.pulsar:pulsar-client',
+            "org.springframework.cloud:spring-cloud-stream:${springCloudStramVersion}",
+            "org.springframework.cloud:spring-cloud-stream-binder-pulsar:${springCloudStramVersion}",
     )
     compileOnly(
             'org.projectlombok:lombok',

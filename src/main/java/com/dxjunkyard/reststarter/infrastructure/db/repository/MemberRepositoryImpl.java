@@ -4,6 +4,7 @@ import com.dxjunkyard.reststarter.domain.model.Count;
 import com.dxjunkyard.reststarter.domain.model.Member;
 import com.dxjunkyard.reststarter.domain.model.search.MemberSearchCondition;
 import com.dxjunkyard.reststarter.domain.repository.member.MemberRepository;
+import com.dxjunkyard.reststarter.infrastructure.db.entity.MemberEntity;
 import com.dxjunkyard.reststarter.infrastructure.db.repository.crud.MemberCrudRepository;
 import com.dxjunkyard.reststarter.infrastructure.db.repository.sql.MemberSearchSqlHelper;
 import lombok.RequiredArgsConstructor;
@@ -35,5 +36,11 @@ public class MemberRepositoryImpl implements MemberRepository {
     public Mono<Count> count() {
         return memberCrudRepository.count()
                 .map(Count::new);
+    }
+
+    @Override
+    public Mono<String> getMemberName(Integer id) {
+        return memberCrudRepository.findById(Long.valueOf(id))
+                .map(MemberEntity::name);
     }
 }

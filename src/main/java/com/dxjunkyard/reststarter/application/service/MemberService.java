@@ -21,4 +21,8 @@ public class MemberService {
     public Mono<Count> count() {
         return memberRepository.count();
     }
+
+    public Mono<String> getMemberName(final Integer id) {
+        return memberRepository.getMemberName(id);
+    }
 }

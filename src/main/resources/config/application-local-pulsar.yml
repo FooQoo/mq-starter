@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    function:
+      definition: memberConsumer
+    stream:
+      bindings:
+        memberConsumer-in-0:
+          destination: my-topic
+          group: my-sub
+
+  pulsar:
+    client:
+      service-url: pulsar://localhost:6650

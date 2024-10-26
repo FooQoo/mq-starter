@@ -11,4 +11,6 @@ public interface MemberRepository {
     Flux<Member> search(MemberSearchCondition condition);
 
     Mono<Count> count();
+
+    Mono<String> getMemberName(Integer id);
 }
