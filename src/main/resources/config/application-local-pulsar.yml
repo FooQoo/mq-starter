@@ -1,12 +1,15 @@
 spring:
   cloud:
     function:
-      definition: memberConsumer
+      definition: memberConsumer;logConsumer
     stream:
       bindings:
         memberConsumer-in-0:
-          destination: my-topic
-          group: my-sub
+          destination: member-topic
+          group: member-sub
+        logConsumer-in-0:
+          destination: log-topic
+          group: log-sub
 
   pulsar:
     client:
