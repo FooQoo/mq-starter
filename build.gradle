@@ -31,6 +31,10 @@ dependencies {
             'org.springframework.boot:spring-boot-starter-data-r2dbc',
             // swagger
             "org.springdoc:springdoc-openapi-ui:${openApiVersion}",
+            // pulsar
+            'org.springframework.cloud:spring-cloud-stream',
+            'org.springframework.cloud:spring-cloud-stream-binder-pulsar',
+            'org.apache.pulsar:pulsar-client',
     )
     compileOnly(
             'org.projectlombok:lombok',
