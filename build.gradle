@@ -35,6 +35,10 @@ dependencies {
             // pulsar
             "org.springframework.cloud:spring-cloud-stream:${springCloudStramVersion}",
             "org.springframework.cloud:spring-cloud-stream-binder-pulsar:${springCloudStramVersion}",
+            // actuator
+            "org.springframework.boot:spring-boot-starter-actuator",
+            "io.projectreactor:reactor-core-micrometer",
+            "io.micrometer:micrometer-registry-prometheus",
     )
     compileOnly(
             'org.projectlombok:lombok',
