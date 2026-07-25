@@ -45,7 +45,7 @@ dependencies {
     )
     runtimeOnly(
             'com.h2database:h2',
-            'io.asyncer:r2dbc-mysql:1.3.0',
+            'io.asyncer:r2dbc-mysql:1.4.3',
             'io.r2dbc:r2dbc-h2',
             'mysql:mysql-connector-java:8.0.33',
             'org.springframework.boot:spring-boot-devtools',
